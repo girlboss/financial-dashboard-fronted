@@ -5,11 +5,12 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from 'react';
 import { Typography } from '@mui/material';
+import ModalMessages from "./ModalMessages.jsx";
 
 const CardBox = () => {
-  const { data } = useData();
+  const { data, errorMessage } = useData();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = 6; 
+  const cardsPerView = 6;
 
   const moveForward = () => {
     if (currentIndex < data.length - cardsPerView) {
@@ -42,6 +43,13 @@ const CardBox = () => {
                 type={card.type}
               />
             ))
+          }
+          {
+              errorMessage != '' &&
+              <ModalMessages
+                  title='No accounts to display.'
+                  description='No accounts to display.'
+              />
           }
         </CardBoxWrapper>
         <MoveButton onClick={moveForward}>
