@@ -11,7 +11,7 @@ export const BalanceWrapper = styled.div`
   display: flex;
   max-width: 300px;
   flex-direction: column;
-  margin-top: 20px !important;
+  margin-top: 10px !important;
   margin: 0 auto;
   justify-content: center;
   padding: 10px;
