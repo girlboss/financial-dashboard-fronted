@@ -125,20 +125,43 @@ export const DataProvider = ({children}) => {
         const fetchData = async () => {
             try {
                 const balances = await getBalances();
-                setData(balances);
+                if (!balances.success) {
+                    setErrorMessage(balances.error);
+                    return
+                }
+                setData(balances.data);
             } catch (error) {
-                console.error('Error fetching balances:', error);
+                setErrorMessage('Error fetching data: ' + error.messages);
             }
-        };
-
+        }
         fetchData();
 
     }, []);
     const [data, setData] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const getBalances = async () => {
-        const response = await fetch(BALANCE_URL)
-        return response.json();
+        try {
+            const response = await fetch(`${BALANCE_URL}/balances`)
+            if (!response.ok) {
+                const errorMessage = await response.text();
+                return {
+                    success: false,
+                    error: errorMessage
+                }
+            }
+            const data = await response.json();
+            return {
+                success: true,
+                data: data
+            }
+        } catch (error) {
+            return {
+                success: false,
+                error: error.message
+            }
+        }
+
     }
 
     const total = {
@@ -154,7 +177,7 @@ export const DataProvider = ({children}) => {
     };
 
     return (
-        <DataContext.Provider value={{data, total}}>
+        <DataContext.Provider value={{data, total, errorMessage}}>
             {children}
         </DataContext.Provider>
     );
