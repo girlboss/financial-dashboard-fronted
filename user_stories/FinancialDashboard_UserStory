@@ -1,0 +1,16 @@
+Use Case ID	1.0
+
+Use Case Name	Display Account Balances
+
+Actors	Banking client
+
+Pre-Conditions	The client has entered his username and password and has successfully passed authentication. The client has logged in into the application.
+
+Primary Steps:	As a banking client I want to see my accounts, account number and balances so I can know my financial status.
+
+Acceptance Criteria	1.	Clear display of accounts and balances  2.	Basic error scenario handling.
+
+Post Conditions	The client can view account balances for all accounts on his dashboard. 
+
+Priority	High
+
