@@ -4,22 +4,30 @@ This project is a web application built with React.js that allows users to retri
 
 <img width="1189" alt="Screenshot 2024-10-14 at 9 24 53 PM" src="https://github.com/user-attachments/assets/3fe0d40a-f786-4063-bb9e-0cfdffef6211">
 
+## Project Structure
+
+- **src/**: Contains the source code for the application.
+  - **components/**: Contains React components.
+  - **constants/**: Contains constant values and configurations.
+  - **contexts/**: Contains React context providers.
+  - **styles/**: Contains CSS and styling files.
+  
+- **public/**: Contains public assets and the `index.html` file.
+
 ## Prerequisites
 
 Ensure you have the following installed:
-NITN ADD THE CORRECT VERSIONS
-- Node.js: Version 20.x.x
-- npm: Version 10.8.x
-  You can verify your versions by running the following commands in your terminal:
+- Node.js: Version 22.9.0
+- npm: Version 10.8.3
+
+You can verify your versions by running the following commands in your terminal:
 
 ```
 node -v
 npm -v
 ```
 
-- follow the setup instructions in the `README.md` of
-  the [Financial-dashboard-backend]([https://github.com/celeste2325/Condo-complaints-back-end](https://github.com/celeste2325/financial-dashboard-backend)) repository to configure the
-  backend service.
+Follow the setup instructions in the `README.md` of the [Financial-dashboard-backend](https://github.com/celeste2325/financial-dashboard-backend) repository to configure the backend service.
 
 ## Installation
 
