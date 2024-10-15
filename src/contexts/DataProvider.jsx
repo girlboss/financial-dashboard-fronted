@@ -142,7 +142,7 @@ export const DataProvider = ({children}) => {
 
     const getBalances = async () => {
         try {
-            const response = await fetch(`${BALANCE_URL}/balances`)
+            const response = await fetch(BALANCE_URL)
             if (!response.ok) {
                 const errorMessage = await response.text();
                 return {
