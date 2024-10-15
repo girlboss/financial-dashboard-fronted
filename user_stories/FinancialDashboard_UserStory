@@ -14,3 +14,18 @@ Post Conditions	The client can view account balances for all accounts on his das
 
 Priority	High
 
+Use Case ID	2.0
+
+Use Case Name	Display Error Message
+
+Actors	Banking client
+
+Pre-Conditions	The client has entered his username and password and has successfully passed authentication. The client has logged in into the application.
+
+Primary Steps:	As a banking client I want to see an error message if my account is not being displayed.
+
+Acceptance Criteria: Detailed error message.
+
+Post Conditions	The account balances are unavailable. 
+
+Priority	High
