@@ -2,7 +2,7 @@
 
 This project is a web application built with React.js that allows users to retrieve account balances and manage financial data effectively. The aim of this dashboard is to provide a simple display of account balances.
 
-[You can view the live application by clicking here] (https://www.youtube.com/watch?v=SEjtwtiDAQg)
+[You can view the live application by clicking here](https://www.youtube.com/watch?v=SEjtwtiDAQg)
 
 <img width="1189" alt="Screenshot 2024-10-14 at 9 24 53 PM" src="https://github.com/user-attachments/assets/3fe0d40a-f786-4063-bb9e-0cfdffef6211">
 
